@@ -9,9 +9,8 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
 </p>
 
-A RESTful movie and director catalog API built with **Node.js**, **Express**, **Prisma ORM**, and **SQLite**.
-
-It provides user authentication with JWT, relational management of movies and directors, and route aliases in both Portuguese and English.
+> A RESTful movie and director catalog API built with **Node.js**, **Express**, **Prisma ORM**, and **SQLite**.
+> It provides user authentication with JWT, relational management of movies and directors, and route aliases in both Portuguese and English.
 
 ---
 
@@ -92,7 +91,7 @@ erDiagram
 | :--- | :--- | :--- | :--- |
 | `GET` | `/directores` | Public | List all directors with their movies |
 | `GET` | `/directores/:id` | Public | Get a single director by ID |
-| `POST` | `/directores` | 🔒 Authenticated | Create a director |
+| `POST` | `/directores` | 🔒 **Bearer JWT** | Create a director |
 
 ### 🎥 Movies (`/filmes` or `/movies`)
 
@@ -100,9 +99,9 @@ erDiagram
 | :--- | :--- | :--- | :--- |
 | `GET` | `/filmes` | Public | List all movies with director details |
 | `GET` | `/filmes/:id` | Public | Get a single movie by ID |
-| `POST` | `/filmes` | 🔒 Authenticated | Add a new movie linked to a director |
-| `PUT` | `/filmes/:id` | 🔒 Authenticated | Update movie details |
-| `DELETE` | `/filmes/:id` | 🔒 Authenticated | Delete a movie |
+| `POST` | `/filmes` | 🔒 **Bearer JWT** | Add a new movie linked to a director |
+| `PUT` | `/filmes/:id` | 🔒 **Bearer JWT** | Update movie details |
+| `DELETE` | `/filmes/:id` | 🔒 **Bearer JWT** | Delete a movie |
 
 ---
 
